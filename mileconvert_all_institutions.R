@@ -18,10 +18,14 @@ data.all <- read.csv("IPEDS_data.csv")
 #set this variable to distance in miles you want to count then create variable name to match miles from
 distanceFrom <- 60
 LT_Miles<-paste("Inst_LT_",distanceFrom,"_Miles",sep = "")
+LT_Miles_pub4<-paste("Inst_LT_",distanceFrom,"_Miles_pub4",sep = "")
+LT_Miles_pub2<-paste("Inst_LT_",distanceFrom,"_Miles_pub2",sep = "")
+
 
 #initialize variables to 0
 data.all[, LT_Miles] <- 0
-
+data.all[, LT_Miles_pub4] <- 0
+data.all[, LT_Miles_pub2] <- 0
 
 #set this to your institution's longitude and lattitude to get miles between your institution and all others
 longitude_compare <- -98.621386
@@ -37,35 +41,13 @@ data.all <-
     state=State.abbreviation..HD2015.,
     state_fips=FIPS.state.code..HD2015.,
     zip=ZIP.code..HD2015.,
-     name = Institution.Name,
+    name = Institution.Name,
     lat = Latitude.location.of.institution..HD2015.,
     long = Longitude.location.of.institution..HD2015.,
     sector = Sector.of.institution..HD2015.
   )
 
 str(data.all)
-
-
-#specify value labels for sector
-data.all$sector <- factor(
-  data.all$sector,
-  levels = c(1, 2, 3, 4, 5, 6),
-  labels = c(
-    "Public, 4-year or above",
-    "Private not-for-profit, 4-year or above",
-    "Private for-profit, 4-year or above"
-    ,
-    "Public, 2-year",
-    "Private not-for-profit, 2-year",
-    "Private for-profit, 2-year"
-  )
-)
-
-
-
-
-
-
 
 
 
@@ -78,7 +60,7 @@ data.all$sector <- factor(
 
 for (n in 1:nrow(data.all))
 {
-
+  
   #lattitude and longitude of the original institution
   long1 <-
     as.numeric(data.all[n, "long"])
@@ -129,6 +111,24 @@ for (n in 1:nrow(data.all))
       data.all[n, LT_Miles] <-
       data.all[n, LT_Miles] + ifelse(distance <= distanceFrom, 1, 0)
     
+    
+    
+    
+    if (!is.na(distance) & data.all[q,"sector"]==1)
+      data.all[n, LT_Miles_pub4] <-
+      data.all[n, LT_Miles_pub4] + ifelse(distance <= distanceFrom, 1, 0)
+    
+    
+    
+    
+    if (!is.na(distance) & data.all[q,"sector"]==4)
+      data.all[n, LT_Miles_pub2] <-
+      data.all[n, LT_Miles_pub2] + ifelse(distance <= distanceFrom, 1, 0)
+    
+    
+    
+    
+    
     #this is used to compare all institutions distance from home institution
     data.all[q, "Compare_Distance"] <- distance_compare
     
@@ -137,9 +137,28 @@ for (n in 1:nrow(data.all))
 }
 
 
+#specify value labels for sector
+data.all$sector <- factor(
+  data.all$sector,
+  levels = c(1, 2, 3, 4, 5, 6),
+  labels = c(
+    "Public, 4-year or above",
+    "Private not-for-profit, 4-year or above",
+    "Private for-profit, 4-year or above"
+    ,
+    "Public, 2-year",
+    "Private not-for-profit, 2-year",
+    "Private for-profit, 2-year"
+  )
+)
+
+
+
+
+#write full spreadsheet to working directory
 write.xlsx(
   data.all,
-  "mydata_2_4_yr.xlsx", row.names = FALSE
+  "mydata_2_4_yr_tx.xlsx", row.names = FALSE
 )
 
 
