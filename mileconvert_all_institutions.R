@@ -15,28 +15,35 @@ setwd("C:/ipedsDistance")
 data.all <- data.frame()
 data.all <- read.csv("IPEDS_data.csv")
 
-#set this variable to distance in miles you want to count
+#set this variable to distance in miles you want to count then create variable name to match miles from
 distanceFrom <- 60
+LT_Miles<-paste("Inst_LT_",distanceFrom,"_Miles",sep = "")
+
+#initialize variables to 0
+data.all[, LT_Miles] <- 0
+
 
 #set this to your institution's longitude and lattitude to get miles between your institution and all others
 longitude_compare <- -98.621386
 latitude_compare <- 29.582418
 
 
-#initialize variable to find all institutions within distanceFrom (miles)
-data.all$distanceCalc <- 0
-
-
 #rename variables for clarity
 data.all <-
   rename(
     data.all,
-    name = Institution.Name,
+    street=Street.address.or.post.office.box..HD2015.,
+    city=City.location.of.institution..HD2015.,
+    state=State.abbreviation..HD2015.,
+    state_fips=FIPS.state.code..HD2015.,
+    zip=ZIP.code..HD2015.,
+     name = Institution.Name,
     lat = Latitude.location.of.institution..HD2015.,
     long = Longitude.location.of.institution..HD2015.,
-    sector = Sector.of.institution..HD2015.,
-    control = Control.of.institution..HD2015.
+    sector = Sector.of.institution..HD2015.
   )
+
+str(data.all)
 
 
 #specify value labels for sector
@@ -56,16 +63,22 @@ data.all$sector <- factor(
 
 
 
+
+
+
+
+
+
 #loop through all universities and calculate distance between home institution and all others
 #n is the main institution and q is the comparison institution
 
 
+
+
+
 for (n in 1:nrow(data.all))
 {
-  #reset variables to 0
-  data.all[n, "LT_60_Miles"] <- 0
-  data.all$distanceCalc <- 0
-  
+
   #lattitude and longitude of the original institution
   long1 <-
     as.numeric(data.all[n, "long"])
@@ -96,6 +109,7 @@ for (n in 1:nrow(data.all))
     
     distance <- distance * 0.621371
     
+    
     #get the distance between utsa and comparison institution in km
     
     distance_compare <-
@@ -107,23 +121,18 @@ for (n in 1:nrow(data.all))
     
     #convert kilometers to miles
     
-    distance <- distance * 0.621371
     distance_compare <- distance_compare * 0.621371
     
     #when distance is not null and the institution 'n' is not the same as 'q' then use distance
     
     if (!is.na(distance))
-      data.all[n, "LT_60_Miles"] <-
-      data.all[n, "LT_60_Miles"] + ifelse(distance < distanceFrom, 1, 0)
+      data.all[n, LT_Miles] <-
+      data.all[n, LT_Miles] + ifelse(distance <= distanceFrom, 1, 0)
     
     #this is used to compare all institutions distance from home institution
     data.all[q, "Compare_Distance"] <- distance_compare
     
   }
-  
-  #get the max of the institutions that are within 60 miles of the institution in question since it increments each time
-  data.all[n, "distanceCalc"] <- max(data.all[n, "distanceCalc"])
-  
   
 }
 
@@ -143,7 +152,4 @@ sheets <- getSheets(wb)
 #  Auto Size
 autoSizeColumn(sheets[[1]], colIndex=1:ncol(data.all))
 saveWorkbook(wb,"mydata_2_4_yr.xlsx")
-
-
-
 
