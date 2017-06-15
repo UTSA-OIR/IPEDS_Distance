@@ -1,0 +1,122 @@
+VariableName,Value,ValueLabel
+State abbreviation (HD2015),AL,Alabama
+State abbreviation (HD2015),AK,Alaska
+State abbreviation (HD2015),AZ,Arizona
+State abbreviation (HD2015),AR,Arkansas
+State abbreviation (HD2015),CA,California
+State abbreviation (HD2015),CO,Colorado
+State abbreviation (HD2015),CT,Connecticut
+State abbreviation (HD2015),DE,Delaware
+State abbreviation (HD2015),DC,District of Columbia
+State abbreviation (HD2015),FL,Florida
+State abbreviation (HD2015),GA,Georgia
+State abbreviation (HD2015),HI,Hawaii
+State abbreviation (HD2015),ID,Idaho
+State abbreviation (HD2015),IL,Illinois
+State abbreviation (HD2015),IN,Indiana
+State abbreviation (HD2015),IA,Iowa
+State abbreviation (HD2015),KS,Kansas
+State abbreviation (HD2015),KY,Kentucky
+State abbreviation (HD2015),LA,Louisiana
+State abbreviation (HD2015),ME,Maine
+State abbreviation (HD2015),MD,Maryland
+State abbreviation (HD2015),MA,Massachusetts
+State abbreviation (HD2015),MI,Michigan
+State abbreviation (HD2015),MN,Minnesota
+State abbreviation (HD2015),MS,Mississippi
+State abbreviation (HD2015),MO,Missouri
+State abbreviation (HD2015),MT,Montana
+State abbreviation (HD2015),NE,Nebraska
+State abbreviation (HD2015),NV,Nevada
+State abbreviation (HD2015),NH,New Hampshire
+State abbreviation (HD2015),NJ,New Jersey
+State abbreviation (HD2015),NM,New Mexico
+State abbreviation (HD2015),NY,New York
+State abbreviation (HD2015),NC,North Carolina
+State abbreviation (HD2015),ND,North Dakota
+State abbreviation (HD2015),OH,Ohio
+State abbreviation (HD2015),OK,Oklahoma
+State abbreviation (HD2015),OR,Oregon
+State abbreviation (HD2015),PA,Pennsylvania
+State abbreviation (HD2015),RI,Rhode Island
+State abbreviation (HD2015),SC,South Carolina
+State abbreviation (HD2015),SD,South Dakota
+State abbreviation (HD2015),TN,Tennessee
+State abbreviation (HD2015),TX,Texas
+State abbreviation (HD2015),UT,Utah
+State abbreviation (HD2015),VT,Vermont
+State abbreviation (HD2015),VA,Virginia
+State abbreviation (HD2015),WA,Washington
+State abbreviation (HD2015),WV,West Virginia
+State abbreviation (HD2015),WI,Wisconsin
+State abbreviation (HD2015),WY,Wyoming
+FIPS state code (HD2015),1,Alabama
+FIPS state code (HD2015),2,Alaska
+FIPS state code (HD2015),4,Arizona
+FIPS state code (HD2015),5,Arkansas
+FIPS state code (HD2015),6,California
+FIPS state code (HD2015),8,Colorado
+FIPS state code (HD2015),9,Connecticut
+FIPS state code (HD2015),10,Delaware
+FIPS state code (HD2015),11,District of Columbia
+FIPS state code (HD2015),12,Florida
+FIPS state code (HD2015),13,Georgia
+FIPS state code (HD2015),15,Hawaii
+FIPS state code (HD2015),16,Idaho
+FIPS state code (HD2015),17,Illinois
+FIPS state code (HD2015),18,Indiana
+FIPS state code (HD2015),19,Iowa
+FIPS state code (HD2015),20,Kansas
+FIPS state code (HD2015),21,Kentucky
+FIPS state code (HD2015),22,Louisiana
+FIPS state code (HD2015),23,Maine
+FIPS state code (HD2015),24,Maryland
+FIPS state code (HD2015),25,Massachusetts
+FIPS state code (HD2015),26,Michigan
+FIPS state code (HD2015),27,Minnesota
+FIPS state code (HD2015),28,Mississippi
+FIPS state code (HD2015),29,Missouri
+FIPS state code (HD2015),30,Montana
+FIPS state code (HD2015),31,Nebraska
+FIPS state code (HD2015),32,Nevada
+FIPS state code (HD2015),33,New Hampshire
+FIPS state code (HD2015),34,New Jersey
+FIPS state code (HD2015),35,New Mexico
+FIPS state code (HD2015),36,New York
+FIPS state code (HD2015),37,North Carolina
+FIPS state code (HD2015),38,North Dakota
+FIPS state code (HD2015),39,Ohio
+FIPS state code (HD2015),40,Oklahoma
+FIPS state code (HD2015),41,Oregon
+FIPS state code (HD2015),42,Pennsylvania
+FIPS state code (HD2015),44,Rhode Island
+FIPS state code (HD2015),45,South Carolina
+FIPS state code (HD2015),46,South Dakota
+FIPS state code (HD2015),47,Tennessee
+FIPS state code (HD2015),48,Texas
+FIPS state code (HD2015),49,Utah
+FIPS state code (HD2015),50,Vermont
+FIPS state code (HD2015),51,Virginia
+FIPS state code (HD2015),53,Washington
+FIPS state code (HD2015),54,West Virginia
+FIPS state code (HD2015),55,Wisconsin
+FIPS state code (HD2015),56,Wyoming
+Sector of institution (HD2015),1,"Public, 4-year or above"
+Sector of institution (HD2015),2,"Private not-for-profit, 4-year or above"
+Sector of institution (HD2015),3,"Private for-profit, 4-year or above"
+Sector of institution (HD2015),4,"Public, 2-year"
+Sector of institution (HD2015),5,"Private not-for-profit, 2-year"
+Sector of institution (HD2015),6,"Private for-profit, 2-year"
+Level of institution (HD2015),1,Four or more years
+Level of institution (HD2015),2,At least 2 but less than 4 years
+Control of institution (HD2015),1,Public
+Control of institution (HD2015),2,Private not-for-profit
+Control of institution (HD2015),3,Private for-profit
+Degree-granting status (HD2015),1,Degree-granting
+Institution size category (HD2015),1,"Under 1,000"
+Institution size category (HD2015),2,"1,000 - 4,999"
+Institution size category (HD2015),3,"5,000 - 9,999"
+Institution size category (HD2015),4,"10,000 - 19,999"
+Institution size category (HD2015),5,"20,000 and above"
+Institution size category (HD2015),-1,Not reported
+Institution size category (HD2015),-2,Not applicable
