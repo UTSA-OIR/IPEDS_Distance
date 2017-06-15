@@ -7,11 +7,12 @@ IPEDS_Data.csv - This file contains the basic information about the institution 
 
 IPEDS_ValueLabels.csv - This file is also from the IPEDS Data Center and contains the value labels for specified variables in the IPEDS_Data.csv file.
 
-The R file is the script and the following lines will need to be changed for this to work on your computer with your institution.
+The R file is the script and the following lines will need to be changed for this to work on your computer with your institution.  Warning, this does take about 45 minutes to run.
 
-Lines 5 and 6: If these packages are already installed, these lines can be commented out.
+Lines 5 and 6: If these packages are not already installed, these lines can be uncommented to install the packages.
 
 Line 12: Set this working directory to the location where you will store the IPEDS csv files above and the final spreadsheet will be written out.
 
-Lines 22 and 23: Set the longitude and latitude for your institution here in order to compare it with all other institutions.
+Line 19: Set this number to the number of miles you want to look at.
 
+Lines 31 and 32: Set the longitude and latitude for your institution here in order to compare it with all other institutions in the file.
