@@ -13,7 +13,7 @@ setwd("C:/ipedsDistance")
 
 #read in file to data frame
 data.all <- data.frame()
-data.all <- read.csv("data.csv")
+data.all <- read.csv("IPEDS_data.csv")
 
 #set this variable to distance in miles you want to count
 distanceFrom <- 60
