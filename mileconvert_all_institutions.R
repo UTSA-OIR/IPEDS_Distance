@@ -158,7 +158,7 @@ data.all$sector <- factor(
 #write full spreadsheet to working directory
 write.xlsx(
   data.all,
-  "mydata_2_4_yr_tx.xlsx", row.names = FALSE
+  "mydata_2_4_yr.xlsx", row.names = FALSE
 )
 
 
