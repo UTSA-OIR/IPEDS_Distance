@@ -2,6 +2,7 @@
 This is an R Script that uses the latitude and longitude of institutions to compare to each other and a home institution.
 
 The .csv files are the following:
+
 IPEDS_Data.csv - This file contains the basic information about the institution including UnitID, Name, Address, Location, Level, Sector, etc which was downloaded from the IPEDS Data Center at https://nces.ed.gov/ipeds/Home/UseTheData.
 
 IPEDS_ValueLabels.csv - This file is also from the IPEDS Data Center and contains the value labels for specified variables in the IPEDS_Data.csv file.
