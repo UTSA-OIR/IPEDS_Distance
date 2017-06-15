@@ -17,3 +17,10 @@ The .csv files which will need to be downloaded to your computer are the followi
 -*Line 19:* Set this number to the number of miles you want to look at.
 
 -*Lines 31 and 32:* Set the longitude and latitude for your institution here in order to compare it with all other institutions in the file.
+
+The final Excel file will have the following columns added:
+
+-Inst_LT_X_Miles: Total institutions within X miles of the institution (includes all types)
+-Inst_LT_X_Miles_pub4: Number of Four Year Public Institutions within X miles 
+-Inst_LT_X_Miles_pub2: Number of Two Year Public Institutions within X miles
+-Compare_Distance: This will be the distance from the university and the 'home' university which was set on line 31 and 32
