@@ -1,5 +1,5 @@
 # IPEDS_Distance
-This is an R Script that uses the latitude and longitude of institutions to compare to each other and a home institution.
+This is an R Script that uses the latitude and longitude of institutions to determine the distance away from each other and a home institution.
 
 The .csv files are the following:
 
