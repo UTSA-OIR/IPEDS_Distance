@@ -3,9 +3,10 @@ This is an R Script that uses the latitude and longitude of institutions to dete
 
 The .csv files which will need to be downloaded to your computer are the following:
 
-IPEDS_Data.csv - This file contains the basic information about the institution including UnitID, Name, Address, Location, Level, Sector, etc which was downloaded from the IPEDS Data Center at https://nces.ed.gov/ipeds/Home/UseTheData.
+**IPEDS_Data.csv** - This file contains the basic information about the institution including UnitID, Name, Address, Location, Level, Sector, etc which was downloaded from the IPEDS Data Center at https://nces.ed.gov/ipeds/Home/UseTheData.
 
-IPEDS_ValueLabels.csv - This file is also from the IPEDS Data Center and contains the value labels for specified variables in the IPEDS_Data.csv file.
+**IPEDS_ValueLabels.csv** - This file is also from the IPEDS Data Center and contains the value labels for specified variables in the IPEDS_Data.csv file.
+
 
 The R file is the script and the following lines will need to be changed for this to work on your computer with your institution.  Warning, this does take about 45 minutes to run.
 
