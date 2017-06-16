@@ -29,3 +29,4 @@ The .csv files which will need to be downloaded to your computer are the followi
 
 - *Compare_Distance:* This will be the distance from the university and the 'home' university which was set on line 31 and 32
 
+See file **mydata_2_4_yr.xlsx** for example of the final file.
